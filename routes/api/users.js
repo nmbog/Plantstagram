@@ -4,3 +4,5 @@ const router = express.Router();
 // @route  GET api/users
 // @access Public
 router.get('/', (req, res) => res.send('User route')); 
+
+module.exports = router;
