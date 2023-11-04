@@ -5,8 +5,8 @@ const Profile = require("../../models/Profile");
 const User = require("../../models/User");
 const { check, validationResult } = require("express-validator");
 
-// Get user profile
-router.get("/current_user", auth, async (req, res) => {
+// Get current user profile (logged in user)
+router.get("/user", auth, async (req, res) => {
   try {
     const profile = await Profile.findOne({ user: req.user.id }).populate(
       "user",
@@ -22,8 +22,8 @@ router.get("/current_user", auth, async (req, res) => {
   }
 });
 
-// Create or edit user profile
-router.post("/current_user", [auth], async (req, res) => {
+// Create or edit current user profile (logged in user)
+router.post("/user", [auth], async (req, res) => {
   const { location, bio } = req.body;
 
   // Build profile
@@ -77,4 +77,17 @@ router.get("/", async (req, res) => {
     }
   });
   */
+
+// Delete profile & user
+router.delete("/", auth, async (req, res) => {
+  try {
+    await Profile.findOneAndRemove({ user: req.user.id });
+    await User.findOneAndRemove({ _id: req.user.id });
+    res.json({ msg: "User removed" });
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server Error");
+  }
+});
+
 module.exports = router;
