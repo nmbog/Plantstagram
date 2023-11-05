@@ -6,17 +6,30 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display&family=Sacramento&display=swap" rel="stylesheet">
     <title>Plantstagram</title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href='index.html'>Home</a></li>
-            <li><a href='register-user.html'><i>Register</i></a></li>
-            <li><a href='login.html'>Login</a></li>
-            <li><a href='profiles.html'>Connect</a></li>
-        </ul>
-    </nav>
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn"><img src="img/plant-2.png" alt="menu" class="plant_icon"><i class='fa fa-caret-down'></i></button>
+            <div class="dropdown-content">
+                <a href='index.html'>Home</a>
+                <a href='register-user.html'>Register</a>
+                <a href='login.html'>Login</a>
+                <a href='profiles.html'>Connect</a>
+            </div>
+        </div>
+    </div>
+    <div class ="content">
+        <h1>Plantstagram</h1>
+        <form class="form" action="create-profile.html">
+            <input type="text" placeholder="Name" name="name" required />
+            <input type="email" placeholder="Email Address" name="email" />
+            <input type="password" placeholder="Password" name="password" minLength="8" />
+            <input type="submit" value="register" class="btn-input" />
+        </form>
+        <p>Already have an account? <a href="login.html">Login!</a></p>
+    </div>
 </body>
 </html>
