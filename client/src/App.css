@@ -1,0 +1,121 @@
+/* Global Styles */
+body {
+  font-family: 'Playfair Display', serif;
+}
+h1 {
+  font-family: 'Pacifico', cursive;
+}
+/* Button Styling */
+button {
+  font-family: 'Sacramento', cursive;
+  font-size: 30px;
+  background-color: #98c377;
+  padding: 5px;
+  min-height: 30px;
+  min-width: 120px;
+  border: none;
+  border-radius: 5px;
+}
+button a {
+  text-decoration: none;
+  color: black;
+}
+button a:hover {
+  color: white;
+}
+/* Navigation bar styles */
+.navbar {
+  overflow: hidden;
+  background-color: white;
+}
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.navbar a:hover, .dropdown:hover, .dropbtn {
+  background-color: #aad688;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {
+  background-color: #aad688;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Link Styles */
+a {
+  text-decoration: none;
+  color: #47894b;
+}
+a:hover {
+  color: #8bbd78;
+}
+
+.content {
+  max-width: 500px;
+  margin: auto;
+}
+
+/* Input Styles */
+input {
+  display: block;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+input.btn-input {
+  font-family: 'Sacramento', cursive;
+  font-size: 30px;
+  background-color: #98c377;
+  padding: 5px;
+  min-height: 30px;
+  min-width: 120px;
+  border: none;
+  border-radius: 5px;
+}
+input.btn-input a {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+}
+input.btn-input:hover {
+  color: white;
+}
+
+/* Label Styles */
+label {
+  display: block;
+  margin-bottom: 5px;
+}
