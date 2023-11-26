@@ -8,13 +8,13 @@ import Login from "./components/auth/login";
 import { Provider } from "react-redux";
 import store from "./store";
 import "./App.css";
-import alert from "./components/layout/alert";
+import Alert from "./components/layout/Alert";
 
 const App = () => (
   <Provider store={store}>
     <Router>
       <Navbar />
-      <alert />
+      <Alert />
       <Routes>
         <Fragment>
           <Route path="/" element={<Landing />} />
